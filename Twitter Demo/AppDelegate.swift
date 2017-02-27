@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import BDBOAuth1Manager
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if Users.currentUser != nil{
+            print("current user")
+        } else{
+            print ("no current user")
+        }
         return true
     }
 
@@ -40,7 +44,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        //print(url.description)
+        //  let twitterClient = BDBOAuth1SessionManager(baseURL: URL(string: "https://api.twitter.com")!, consumerKey: "vdqohgK10iC8k7HDtVXgu1bKk", consumerSecret: "Pk6Ifm0hzXaYCd2WSKGRI5bCT76WImtpbIop4195HQ5NXvILwt")!
+      
+        let client = TwitterClient.sharedInstance!
+        client.handleOpenUrl(url: url)
+        
+        return true
+        }
 
 }
 
