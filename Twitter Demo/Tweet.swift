@@ -31,6 +31,8 @@ class Tweet: NSObject {
         }
         favorited = dictionary["favorited"] as? Bool
         retweeted = dictionary["retweeted"] as? Bool
+        print(favorited!)
+        print(retweeted!)
         if(favorited)!{
             fimage = #imageLiteral(resourceName: "favoriteson")
         }else{
@@ -40,7 +42,7 @@ class Tweet: NSObject {
             rimage = #imageLiteral(resourceName: "repeaton")
         }
         else{
-            fimage = #imageLiteral(resourceName: "repeat")
+            rimage = #imageLiteral(resourceName: "repeat")
         }
         
     }

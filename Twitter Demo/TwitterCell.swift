@@ -15,6 +15,10 @@ class TwitterCell: UITableViewCell {
     @IBOutlet weak var name2Label: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var contentText: UILabel!
+    
+    @IBOutlet weak var rImage: UIButton!
+    @IBOutlet weak var fImge: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

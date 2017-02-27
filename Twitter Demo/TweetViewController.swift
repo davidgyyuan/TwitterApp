@@ -70,9 +70,15 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.name2Label.text="@\(tweet.user!.screenname!)"
         cell.profileImage.layer.cornerRadius = 5
         cell.profileImage.clipsToBounds = true
+        
+        cell.rImage.setImage(tweet.rimage, for: UIControlState.normal)
+        cell.fImge.setImage(tweet.fimage, for: UIControlState.normal)
         return cell
     }
 
+    @IBAction func favoriteClick(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 

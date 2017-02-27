@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="-76" y="137.18140929535232"/>
         </scene>
-        <!--Tweet View Controller-->
+        <!--Twitter Feed-->
         <scene sceneID="GEe-W6-dhL">
             <objects>
                 <viewController id="cNV-ah-HuW" customClass="TweetViewController" customModule="Twitter_Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,45 +101,54 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OqU-eW-5OJ">
-                                                    <rect key="frame" x="33" y="80" width="25" height="25"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4n3-2k-1mN">
+                                                    <rect key="frame" x="66" y="67" width="20" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="rc1-cN-M9x"/>
-                                                        <constraint firstAttribute="height" constant="25" id="uJP-R7-rm2"/>
+                                                        <constraint firstAttribute="width" constant="20" id="MAU-XJ-d6X"/>
+                                                        <constraint firstAttribute="height" constant="20" id="VS3-Qb-tqX"/>
                                                     </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zit-Xj-cJp">
-                                                    <rect key="frame" x="8" y="80" width="25" height="25"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktg-2Q-Va2">
+                                                    <rect key="frame" x="93" y="67" width="20" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="KdC-oz-oPB"/>
-                                                        <constraint firstAttribute="width" constant="25" id="WdZ-2f-rYE"/>
+                                                        <constraint firstAttribute="height" constant="20" id="0Yf-hY-O6c"/>
+                                                        <constraint firstAttribute="width" constant="20" id="4tj-gF-0KD"/>
                                                     </constraints>
-                                                </imageView>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="favoriteClick:" destination="cNV-ah-HuW" eventType="touchUpInside" id="7YG-98-CSJ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="TPv-u3-loj" firstAttribute="top" secondItem="Ur1-C0-glv" secondAttribute="bottom" constant="1" id="FW6-4S-oBM"/>
-                                                <constraint firstAttribute="bottom" secondItem="Zit-Xj-cJp" secondAttribute="bottom" constant="8" id="M2M-YY-ALp"/>
                                                 <constraint firstItem="mWs-Fd-tYy" firstAttribute="top" secondItem="DNL-ob-8Ky" secondAttribute="top" constant="8" id="MH0-Rn-kfW"/>
                                                 <constraint firstAttribute="trailing" secondItem="O0c-gI-O1Y" secondAttribute="trailing" constant="8" id="MKw-ob-Zva"/>
+                                                <constraint firstItem="4n3-2k-1mN" firstAttribute="leading" secondItem="DNL-ob-8Ky" secondAttribute="leading" constant="66" id="Moe-1w-pNR"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TPv-u3-loj" secondAttribute="trailing" constant="8" id="Ng3-OP-ece"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4n3-2k-1mN" secondAttribute="bottom" constant="8" id="OSF-cz-GHg"/>
                                                 <constraint firstItem="mWs-Fd-tYy" firstAttribute="leading" secondItem="IIi-o8-tja" secondAttribute="trailing" constant="8" id="UIX-EI-3Wn"/>
+                                                <constraint firstItem="4n3-2k-1mN" firstAttribute="top" secondItem="TPv-u3-loj" secondAttribute="bottom" constant="8" id="V6a-y1-moc"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TPv-u3-loj" secondAttribute="bottom" constant="8" id="X8v-77-mdL"/>
+                                                <constraint firstItem="Ktg-2Q-Va2" firstAttribute="top" secondItem="TPv-u3-loj" secondAttribute="bottom" constant="8" id="ZM1-N8-nxc"/>
                                                 <constraint firstItem="O0c-gI-O1Y" firstAttribute="top" secondItem="DNL-ob-8Ky" secondAttribute="top" constant="8" id="bOT-Dc-9aW"/>
                                                 <constraint firstItem="Ur1-C0-glv" firstAttribute="leading" secondItem="IIi-o8-tja" secondAttribute="trailing" constant="8" id="doP-l0-61Y"/>
-                                                <constraint firstItem="Zit-Xj-cJp" firstAttribute="leading" secondItem="DNL-ob-8Ky" secondAttribute="leading" constant="8" id="eDq-ay-ded"/>
-                                                <constraint firstItem="OqU-eW-5OJ" firstAttribute="leading" secondItem="Zit-Xj-cJp" secondAttribute="trailing" id="h7f-X4-oXB"/>
+                                                <constraint firstItem="Ktg-2Q-Va2" firstAttribute="leading" secondItem="4n3-2k-1mN" secondAttribute="trailing" constant="7" id="hen-Rv-2qN"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ktg-2Q-Va2" secondAttribute="bottom" constant="8" id="lzg-xl-io5"/>
                                                 <constraint firstItem="Ur1-C0-glv" firstAttribute="top" secondItem="DNL-ob-8Ky" secondAttribute="top" constant="26" id="m8J-Kq-xHk"/>
                                                 <constraint firstItem="IIi-o8-tja" firstAttribute="leading" secondItem="DNL-ob-8Ky" secondAttribute="leading" constant="8" id="mSE-Wh-dQT"/>
-                                                <constraint firstAttribute="bottom" secondItem="OqU-eW-5OJ" secondAttribute="bottom" constant="8" id="v2E-Yg-c9Y"/>
                                                 <constraint firstItem="TPv-u3-loj" firstAttribute="leading" secondItem="IIi-o8-tja" secondAttribute="trailing" constant="8" id="wdw-gd-eRE"/>
                                                 <constraint firstItem="IIi-o8-tja" firstAttribute="top" secondItem="DNL-ob-8Ky" secondAttribute="top" constant="8" id="wgm-ae-40x"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentText" destination="TPv-u3-loj" id="FxC-9a-7d3"/>
+                                            <outlet property="fImge" destination="Ktg-2Q-Va2" id="g9T-XY-GLH"/>
                                             <outlet property="name2Label" destination="Ur1-C0-glv" id="zEg-bU-q1L"/>
                                             <outlet property="nameLabel" destination="mWs-Fd-tYy" id="2HE-DK-Ci9"/>
                                             <outlet property="profileImage" destination="IIi-o8-tja" id="JHb-Ga-NNZ"/>
+                                            <outlet property="rImage" destination="4n3-2k-1mN" id="SxY-A2-xue"/>
                                             <outlet property="timeLabel" destination="O0c-gI-O1Y" id="vlu-oN-ysN"/>
                                         </connections>
                                     </tableViewCell>
@@ -154,7 +163,7 @@
                             <constraint firstItem="y5P-CR-KSB" firstAttribute="top" secondItem="15Y-QS-ruK" secondAttribute="bottom" id="zPi-j6-DdZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="s23-we-29n"/>
+                    <navigationItem key="navigationItem" title="Twitter Feed" id="s23-we-29n"/>
                     <connections>
                         <outlet property="tableView" destination="15Y-QS-ruK" id="mGw-ID-wSZ"/>
                     </connections>
